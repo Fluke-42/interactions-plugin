@@ -19,6 +19,11 @@
   }
 
   async function getTarget(ctx: CommandContext) {
+    if (ctx.rest.includes(EVERYONE)) {
+      await ctx.replyPrivately(`This command can not be used with the All ping alias`)
+      return undefined;
+    }
+
     const target = ctx.args[0];
     if (!target) {
       await printBaseError(ctx);
