@@ -46,6 +46,51 @@
           await sendInteraction(ctx, "hug", "hugs", ctx.sender, target);
         }
       },
+      cuddle: {
+        description: "cuddle with someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "cuddle", "cuddles with", ctx.sender, target);
+        }
+      },
+      pat: {
+        description: "pat someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "pat", "pats", ctx.sender, target);
+        }
+      },
+      peek: {
+        description: "peek someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "peek", "peeks at", ctx.sender, target);
+        }
+      },
+      poke: {
+        description: "poke someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "poke", "pokes", ctx.sender, target);
+        }
+      },
+      nyah: {
+        description: "nyah at someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "nyah", "nyahs at", ctx.sender, target);
+        }
+      },
       bite: {
         description: "bite someone",
         usage: "[user]",
@@ -53,6 +98,24 @@
           const target = await getTarget(ctx);
           if (!target) return;
           await sendInteraction(ctx, "bite", "bites", ctx.sender, target);
+        }
+      },
+      nom: {
+        description: "nom on someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "nom", "noms on", ctx.sender, target);
+        }
+      },
+      nosebleed: {
+        description: "show getting a nosebleed from someone",
+        usage: "[user]",
+        async run(ctx: CommandContext) {
+          const target = await getTarget(ctx);
+          if (!target) return;
+          await sendInteraction(ctx, "nosebleed", "gets a nosebleed from", ctx.sender, target);
         }
       },
       lick: {
