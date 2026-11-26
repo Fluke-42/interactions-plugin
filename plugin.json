@@ -1,0 +1,4 @@
+{
+  "description": "a fun way to interact with other people",
+  "fetch": ["api.otakugifs.xyz", "cdn.otakugifs.xyz"]
+}
