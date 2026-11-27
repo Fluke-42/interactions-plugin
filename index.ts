@@ -12,6 +12,11 @@
   ) {
     const gif = await getGif(ctx, reaction);
     await ctx.replyImage(gif.url, `${sender} ${action} ${target}`);
+    ctx.metrics.increment("interactions", 1, {
+      type: reaction,
+      isSelf: String(target === ctx.self),
+      isGroup: String(ctx.isGroup)
+    });
   }
 
   async function printBaseError(ctx: CommandContext) {
